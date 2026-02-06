@@ -14,7 +14,9 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=https
       - WEBHOOK_URL=${WEBHOOK_URL}
-      - N8N_RUNNERS_ENABLED=true
+      - N8N_RUNNERS_MODE=external
+      - N8N_RUNNERS_TASK_BROKER_URI=http://127.0.0.1:5679
+      - N8N_RUNNERS_AUTH_TOKEN=xe/bguBi+oQ2YorgYFnauRlspy73fZ6u
     volumes:
       - ./n8n_data:/home/node/.n8n
     networks:
