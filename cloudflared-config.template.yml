@@ -3,7 +3,7 @@
 # - n8n.{{DOMAIN}} -> Main UI
 # - webhook.{{DOMAIN}} -> Webhook endpoints
 
-tunnel: { { TUNNEL_ID } }
+tunnel: {{TUNNEL_ID}}
 credentials-file: /etc/cloudflared/creds/credentials.json
 
 ingress:
