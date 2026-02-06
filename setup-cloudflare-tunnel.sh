@@ -50,7 +50,7 @@ echo "🔧 Creating Cloudflare tunnel..."
 cloudflared tunnel create ${TUNNEL_NAME}
 
 # Get tunnel ID
-TUNNEL_ID=$(cloudflared tunnel list --name ${TUNNEL_NAME} --format json | jq -r '.[0].id')
+TUNNEL_ID=$(cloudflared tunnel list --name ${TUNNEL_NAME} --output json | jq -r '.[0].id')
 
 echo "📋 Tunnel ID: ${TUNNEL_ID}"
 
